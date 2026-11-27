@@ -61,9 +61,3 @@ Verificările de sintaxă și testele sunt fără dependențe externe. Rezultate
 ## Gestionarea prin GitHub
 
 Repository: [lupudaniel-beep/Studiul-Individual-Nr2-Album](https://github.com/lupudaniel-beep/Studiul-Individual-Nr2-Album).
-
-Implementarea locală are commit-uri reale, realizate pe etape. Dacă fișierele sunt încărcate prin conexiunea GitHub, commit-urile de acolo reflectă încărcările efective și pot avea identificatori diferiți de istoricul local. Niciun istoric nu este prezentat drept contribuții ale unei echipe, code review-uri sau activitate din alte zile. Nu se folosesc date personale sau fotografii ale utilizatorului în codul proiectului. Pentru starea publicării, consultă rezultatul comunicat la predare și verifică repository-ul; simpla prezență a unui link aici nu dovedește că fișierele au fost încărcate.
-
-Pentru dezvoltări viitoare, creează un issue cu cerința și criteriile de acceptare, lucrează pe o ramură dedicată, rulează testele și deschide un pull request. Acesta este fluxul recomandat, nu o afirmație că au avut loc review-uri în acest proiect.
-
-Vezi [cerințele confirmate](docs/CERINTE.md) și [scenariul de prezentare](docs/PREZENTARE.md).
