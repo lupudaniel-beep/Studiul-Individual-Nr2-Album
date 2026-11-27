@@ -1,0 +1,9 @@
+{
+  "name": "albumia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Generator de albume cu fotografii — studiul individual nr. 2",
+  "scripts": { "start": "node server.mjs", "test": "node --test", "check": "node --check app.js && node --check model.js && node --check server.mjs" },
+  "engines": { "node": ">=22" }
+}

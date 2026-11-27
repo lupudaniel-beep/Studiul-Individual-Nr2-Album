@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ro">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#183e36"><title>Albumia · Generator de albume</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="./"><span class="brand-mark">a</span> albumia<span class="brand-dot">.</span></a>
+    <p class="eyebrow">SPAȚIUL TĂU CREATIV</p>
+    <button id="new-album" class="primary full">＋ Creează album</button>
+    <label class="search-label" for="search">Caută în colecție</label><input id="search" type="search" placeholder="Numele albumului…">
+    <div class="collection-heading"><span>ALBUMELE MELE</span><span id="album-count">0</span></div>
+    <nav id="album-list" aria-label="Albumele mele"></nav>
+    <div class="sidebar-bottom"><button id="import-album" class="ghost full">Importă album JSON</button><p><span class="privacy-dot"></span> Fotografiile rămân pe dispozitiv.<br>Fără cont. Fără încărcare pe server.</p></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>COLECȚIA PERSONALĂ</span><span class="save-state" id="save-state">Salvare locală</span></header>
+    <section class="welcome" id="welcome"><div class="empty-art" aria-hidden="true"><span>✦</span><div></div><div></div></div><p class="eyebrow">FOTOGRAFIILE TALE. POVESTEA TA.</p><h1>Amintiri care<br>merită un album.</h1><p>Adună momentele preferate, așază-le în ordine<br>și creează un album pe care îl poți păstra sau dărui.</p><button id="first-album" class="primary">Creează primul album</button><div class="welcome-details"><span>01 &nbsp; Alege fotografiile</span><span>02 &nbsp; Spune povestea</span><span>03 &nbsp; Exportă albumul</span></div></section>
+    <section id="editor" hidden>
+      <div class="album-heading"><div><p class="eyebrow">UN LOC PENTRU MOMENTELE TALE</p><h1 id="album-title"></h1><p id="album-description" class="description"></p><p id="album-meta" class="meta"></p></div><button id="edit-album" class="outline">Editează detaliile</button></div>
+      <div class="toolbar"><div class="segmented" aria-label="Aspect album"><button id="layout-grid" aria-pressed="true">▦ Grilă</button><button id="layout-story" aria-pressed="false">▤ Poveste</button></div><div class="actions"><button id="backup-album" class="ghost">Backup JSON</button><button id="export-album" class="outline">Exportă HTML</button><button id="add-photos" class="primary">＋ Adaugă fotografii</button></div></div>
+      <div id="drop-zone" class="drop-zone" tabindex="0" role="button" aria-label="Adaugă fotografii: apasă sau trage fișiere aici"><span class="upload-icon">＋</span><strong>Un album începe cu un moment.</strong><span>Trage fotografiile aici sau apasă pentru a le alege</span><small>JPG, PNG, WebP, GIF · maximum 10 MB / fișier · 100 fotografii / album</small></div>
+      <div id="photo-grid" class="photo-grid"></div>
+      <footer class="album-footer"><span>Prima fotografie devine coperta albumului.</span><button id="delete-album" class="danger ghost">Șterge albumul</button></footer>
+    </section>
+    <div id="status" role="status" aria-live="polite" hidden></div>
+  </main>
+  <input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden>
+  <input id="import-input" type="file" accept="application/json,.json" hidden>
+  <dialog id="album-dialog"><form id="album-form"><p class="eyebrow">DETALIILE ALBUMULUI</p><h2 id="dialog-title">Un nou început.</h2><label for="name-input">Titlu album</label><input id="name-input" required maxlength="100" placeholder="De exemplu: Vara la mare"><label for="description-input">Descriere <span class="meta">(opțional)</span></label><textarea id="description-input" maxlength="500" rows="3" placeholder="Povestea din spatele fotografiilor…"></textarea><div class="dialog-actions"><button type="button" id="cancel-dialog" class="ghost">Anulează</button><button type="submit" class="primary">Salvează albumul</button></div></form></dialog>
+  <dialog id="viewer"><button id="close-viewer" class="outline">Închide</button><img id="viewer-image" alt=""><p id="viewer-caption"></p><div class="viewer-actions"><button id="previous-photo" class="outline">Precedenta</button><span id="viewer-position"></span><button id="next-photo" class="outline">Următoarea</button></div></dialog>
+  <script type="module" src="app.js"></script>
+</body></html>
